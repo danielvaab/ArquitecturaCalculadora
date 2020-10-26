@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: #f0f0f0;
+}
+.container{
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 100px;
+}
+.lbl-menu{
+    background: #234;
+}
+.lbl-menu label{
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 400ms ease;
+}
+.lbl-menu label:hover{
+    background: #28435d;
+}
+.content{
+    position: relative;
+}
+.content div{
+    position: absolute;
+    line-height: 1.8;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.90);
+    padding: 50px;
+    background: #fff;
+    padding-bottom: 40px;
+}
+#radio1,#radio2,#radio3,#radio4{
+    display: none;
+}
+#radio1:checked ~ .tab1,
+#radio2:checked ~ .tab2,
+#radio3:checked ~ .tab3,
+#radio4:checked ~ .tab4
+{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+.content div:after{
+    position: absolute;
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    bottom: 100%;
+    left: 40px;
+}
+.content .tab2:after{
+    left: 165px;
+}
+.content .tab3:after{
+    left: 270px;
+}
+@media only screen and (min-width:350px) and (max-width:350px){
+	.container{
+	width: 100%;
+	}
+}
+.titles{
+    position: relative;
+    text-align: center;
+    margin-top:-30px;
+    margin-bottom: 10px;
+}
+.boton{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 2px solid #28435d;
+  }
+  .inputs{
+    border: none;
+    border-bottom: 2px solid #28435d;
+    padding: 10px;
+  }
+  .title {
+    text-align: center;
+    margin: 30px 0 -50px 0;
+	font-weight: 100;
+	text-transform: uppercase;
+	color: #28435d;
+	font-style: italic;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 58px;
+	line-height: 54px;
+	text-shadow: 2px 5px 0 rgba(0,0,0,0.2);
+  }
